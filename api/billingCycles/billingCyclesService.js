@@ -1,5 +1,8 @@
-const BillingCycle = require('./billingCycle')
+// Criação dos Métodos da API
 
-BillingCycle.methods(['get', 'post', 'put', 'delete'])
+const BillingCycles = require('./billingCycles')
 
-module.exports = BillingCycle
+BillingCycles.methods(['get', 'post', 'put', 'delete'])
+BillingCycles.updateOptions({new: true, runValidators: true})
+
+module.exports = BillingCycles
